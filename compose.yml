@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: .
+    restart: unless-stopped
+    volumes:
+      - storage:/app/storage
+    environment:
+      APP_NAME: "Wedding"
+      APP_KEY: ${APP_KEY}
+      APP_URL: ${APP_URL}
+      APP_DEBUG: ${APP_DEBUG:-false}
+      APP_ENV: ${APP_ENV:-production}
+      LOG_LEVEL: ${LOG_LEVEL:-error}
+      CACHE_STORE: 'apc'
+      LOG_STACK: 'stdout,stderr'
+
+volumes:
+  storage:

@@ -1,0 +1,6 @@
+@import '@fontsource-variable/vollkorn';
+@import '@fontsource/great-vibes';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
